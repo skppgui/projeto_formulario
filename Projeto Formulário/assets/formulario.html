@@ -3,40 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="stylesheet" href="../css/formulario.css" />
     <title>Formulário com validação em JavaScript</title>
   </head>
   <body>
     <div class="login-card">
-       <h1>Formulário</h1>
-    
+      <h1>Formulário</h1>
+
       <form>
-        
         <label for="name">Nome:</label>
-        <input type="text" id="name">
-        <br>
+        <input type="text" id="nome" />
+        <br />
         <label for="text">CEP:</label>
-        <input type="text" id="cep">
-        <br>
-        <label for="text">Rua</label>
-        <input type="text" id="rua">
-        <br>
+        <input type="text" id="cep" />
+        <br />
+        <label for="text">Rua:</label>
+        <input type="text" id="logradouro" />
+        <br />
         <label for="text">Bairro:</label>
-        <input type="text" id="bairro">
-        <br>
+        <input type="text" id="bairro" />
+        <br />
         <label for="text">UF:</label>
-        <input type="text" id="uf">
-        <br>
+        <input type="text" id="uf" />
+        <br />
         <label for="email">Email:</label>
-        <input type="email" id="email">
-        
-         
-       
+        <input type="email" id="email" />
       </form>
     </div>
 
-    <button id="cadastrar">Cadastrar</button>
+    <button id="botao" onclick="LimpaForm()">Cadastrar</button>
   </body>
 
-  <script src="../js/arquivo.js"></script>
+  <script src="../js/formulario.js"></script>
+  <script src="../js/cep.js"></script>
+  <script src="../js/limpa.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+  <script>
+    $("#cep").mask("00000-000");
+  </script>
 </html>
